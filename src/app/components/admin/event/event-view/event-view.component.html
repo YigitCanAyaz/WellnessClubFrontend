@@ -4,7 +4,7 @@
     <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
       <ol class="breadcrumb pt-0">
         <li class="breadcrumb-item"><a routerLink="/admin">Dashboard</a></li>
-        <li class="breadcrumb-item"><a routerLink="/admin/events/list">Cars</a></li>
+        <li class="breadcrumb-item"><a routerLink="/admin/events/list">Events</a></li>
         <li class="breadcrumb-item active" aria-current="page">View</li>
       </ol>
     </nav>
@@ -59,6 +59,8 @@
         <p class="card-text"><b>Id:</b>&emsp;{{event.id}}</p>
         <p class="card-text"><b>Title:</b>&emsp;{{event.title}}</p>
         <p class="card-text"><b>Description:</b>&emsp;{{event.description}}</p>
+        <p class="card-text"><b>Hour:</b>&emsp;{{event.date | date: 'HH:mm'}}</p>
+        <p class="card-text"><b>Day:</b>&emsp;{{event.date | date: 'dd/MM/yyyy'}}</p>
         <p class="card-text"><b>Image:&emsp;</b><br /><img src="https://localhost:7286{{event.imagePath}}" style="height: 20vh;"
             class="mt-2" />
         </p>

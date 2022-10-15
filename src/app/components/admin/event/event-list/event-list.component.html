@@ -44,7 +44,7 @@
             (click)="getEventViewById(event.id)">
               <td><b>{{i + 1}}</b></td>
               <td>{{event.title}}</td>
-              <td>{{event.description}}</td>
+              <td>{{event.description | descriptionFilterPipe}}</td>
               <td>{{event.date}}</td>
             </tr>
           </tbody>

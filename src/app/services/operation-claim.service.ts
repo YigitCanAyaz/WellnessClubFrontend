@@ -11,7 +11,7 @@ import { SingleResponseModel } from 'src/app/models/singleResponseModel';
 })
 export class OperationClaimService {
 
-  baseUrl: string = 'https://localhost:44343/api/operationclaims/';
+  baseUrl: string = 'https://localhost:7286/api/operationclaims/';
 
   constructor(private httpClient: HttpClient) { }
 

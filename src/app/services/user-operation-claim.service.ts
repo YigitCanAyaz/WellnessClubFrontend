@@ -12,7 +12,7 @@ import { SingleResponseModel } from 'src/app/models/singleResponseModel';
 })
 export class UserOperationClaimService {
 
-  baseUrl: string = 'https://localhost:44343/api/useroperationclaims/';
+  baseUrl: string = 'https://localhost:7286/api/useroperationclaims/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -11,7 +11,7 @@ import { SingleResponseModel } from '../models/singleResponseModel';
 })
 export class AuthService {
 
-  apiUrl = 'https://localhost:44343/api/auth/';
+  apiUrl = 'https://localhost:7286/api/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

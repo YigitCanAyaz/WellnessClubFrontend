@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  baseUrl: string = 'https://localhost:44343/api/users/';
+  baseUrl: string = 'https://localhost:7286/api/users/';
 
   constructor(private httpClient: HttpClient) { }
 

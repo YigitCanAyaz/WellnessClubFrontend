@@ -32,6 +32,36 @@ import { UserOperationClaimListComponent } from './components/admin/user-operati
 import { UserOperationClaimRemoveComponent } from './components/admin/user-operation-claim/user-operation-claim-remove/user-operation-claim-remove.component';
 import { UserOperationClaimUpdateComponent } from './components/admin/user-operation-claim/user-operation-claim-update/user-operation-claim-update.component';
 import { UserOperationClaimViewComponent } from './components/admin/user-operation-claim/user-operation-claim-view/user-operation-claim-view.component';
+import { CollaborationAddComponent } from './components/admin/collaboration/collaboration-add/collaboration-add.component';
+import { CollaborationViewComponent } from './components/admin/collaboration/collaboration-view/collaboration-view.component';
+import { CollaborationListComponent } from './components/admin/collaboration/collaboration-list/collaboration-list.component';
+import { CollaborationRemoveComponent } from './components/admin/collaboration/collaboration-remove/collaboration-remove.component';
+import { CollaborationUpdateComponent } from './components/admin/collaboration/collaboration-update/collaboration-update.component';
+import { EventAddComponent } from './components/admin/event/event-add/event-add.component';
+import { EventUpdateComponent } from './components/admin/event/event-update/event-update.component';
+import { EventListComponent } from './components/admin/event/event-list/event-list.component';
+import { EventViewComponent } from './components/admin/event/event-view/event-view.component';
+import { EventRemoveComponent } from './components/admin/event/event-remove/event-remove.component';
+import { GalleryAddComponent } from './components/admin/gallery/gallery-add/gallery-add.component';
+import { GalleryUpdateComponent } from './components/admin/gallery/gallery-update/gallery-update.component';
+import { GalleryViewComponent } from './components/admin/gallery/gallery-view/gallery-view.component';
+import { GalleryListComponent } from './components/admin/gallery/gallery-list/gallery-list.component';
+import { GalleryRemoveComponent } from './components/admin/gallery/gallery-remove/gallery-remove.component';
+import { RecipeAddComponent } from './components/admin/recipe/recipe-add/recipe-add.component';
+import { RecipeListComponent } from './components/admin/recipe/recipe-list/recipe-list.component';
+import { RecipeViewComponent } from './components/admin/recipe/recipe-view/recipe-view.component';
+import { RecipeUpdateComponent } from './components/admin/recipe/recipe-update/recipe-update.component';
+import { RecipeRemoveComponent } from './components/admin/recipe/recipe-remove/recipe-remove.component';
+import { UserHeightAddComponent } from './components/admin/user-height/user-height-add/user-height-add.component';
+import { UserHeightListComponent } from './components/admin/user-height/user-height-list/user-height-list.component';
+import { UserHeightViewComponent } from './components/admin/user-height/user-height-view/user-height-view.component';
+import { UserHeightUpdateComponent } from './components/admin/user-height/user-height-update/user-height-update.component';
+import { UserHeightRemoveComponent } from './components/admin/user-height/user-height-remove/user-height-remove.component';
+import { UserWeightAddComponent } from './components/admin/user-weight/user-weight-add/user-weight-add.component';
+import { UserWeightUpdateComponent } from './components/admin/user-weight/user-weight-update/user-weight-update.component';
+import { UserWeightViewComponent } from './components/admin/user-weight/user-weight-view/user-weight-view.component';
+import { UserWeightListComponent } from './components/admin/user-weight/user-weight-list/user-weight-list.component';
+import { UserWeightRemoveComponent } from './components/admin/user-weight/user-weight-remove/user-weight-remove.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -59,6 +89,36 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UserOperationClaimRemoveComponent,
     UserOperationClaimUpdateComponent,
     UserOperationClaimViewComponent,
+    CollaborationAddComponent,
+    CollaborationViewComponent,
+    CollaborationListComponent,
+    CollaborationRemoveComponent,
+    CollaborationUpdateComponent,
+    EventAddComponent,
+    EventUpdateComponent,
+    EventListComponent,
+    EventViewComponent,
+    EventRemoveComponent,
+    GalleryAddComponent,
+    GalleryUpdateComponent,
+    GalleryViewComponent,
+    GalleryListComponent,
+    GalleryRemoveComponent,
+    RecipeAddComponent,
+    RecipeListComponent,
+    RecipeViewComponent,
+    RecipeUpdateComponent,
+    RecipeRemoveComponent,
+    UserHeightAddComponent,
+    UserHeightListComponent,
+    UserHeightViewComponent,
+    UserHeightUpdateComponent,
+    UserHeightRemoveComponent,
+    UserWeightAddComponent,
+    UserWeightUpdateComponent,
+    UserWeightViewComponent,
+    UserWeightListComponent,
+    UserWeightRemoveComponent,
   ],
   imports: [
     BrowserModule,

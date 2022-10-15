@@ -2,6 +2,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
 import { AdminLayoutComponent } from './components/admin/admin-layout/admin-layout.component';
+import { OperationClaimAddComponent } from './components/admin/operation-claim/operation-claim-add/operation-claim-add.component';
+import { OperationClaimListComponent } from './components/admin/operation-claim/operation-claim-list/operation-claim-list.component';
+import { OperationClaimRemoveComponent } from './components/admin/operation-claim/operation-claim-remove/operation-claim-remove.component';
+import { OperationClaimUpdateComponent } from './components/admin/operation-claim/operation-claim-update/operation-claim-update.component';
+import { OperationClaimViewComponent } from './components/admin/operation-claim/operation-claim-view/operation-claim-view.component';
+import { UserOperationClaimAddComponent } from './components/admin/user-operation-claim/user-operation-claim-add/user-operation-claim-add.component';
+import { UserOperationClaimListComponent } from './components/admin/user-operation-claim/user-operation-claim-list/user-operation-claim-list.component';
+import { UserOperationClaimRemoveComponent } from './components/admin/user-operation-claim/user-operation-claim-remove/user-operation-claim-remove.component';
+import { UserOperationClaimUpdateComponent } from './components/admin/user-operation-claim/user-operation-claim-update/user-operation-claim-update.component';
+import { UserOperationClaimViewComponent } from './components/admin/user-operation-claim/user-operation-claim-view/user-operation-claim-view.component';
+import { UserAddComponent } from './components/admin/user/user-add/user-add.component';
+import { UserListComponent } from './components/admin/user/user-list/user-list.component';
+import { UserRemoveComponent } from './components/admin/user/user-remove/user-remove.component';
+import { UserUpdateComponent } from './components/admin/user/user-update/user-update.component';
+import { UserViewComponent } from './components/admin/user/user-view/user-view.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginGuard } from './guards/login.guard';
@@ -30,11 +45,11 @@ const routes: Routes = [
       { path: "userheights/list", component: UserHeightListComponent },
       { path: "userweights/list", component: UserWeightListComponent },
 
-      { path: "events/view/:eventId", component: eventViewComponent },
-      { path: "galleries/view/:galleryId", component: galleryViewComponent },
-      { path: "heights/view/:heightId", component: heightViewComponent },
+      { path: "events/view/:eventId", component: EventViewComponent },
+      { path: "galleries/view/:galleryId", component: GalleryViewComponent },
+      { path: "heights/view/:heightId", component: HeightViewComponent },
       { path: "collaborations/view/:collaborationId", component: CollaborationViewComponent },
-      { path: "recipes/view/:recipeId", component: recipeViewComponent },
+      { path: "recipes/view/:recipeId", component: RecipeViewComponent },
       { path: "weights/view/:weightId", component: WeightViewComponent },
       { path: "users/view/:userId", component: UserViewComponent },
       { path: "operationclaims/view/:operationClaimId", component: OperationClaimViewComponent },
@@ -42,11 +57,11 @@ const routes: Routes = [
       { path: "userheights/view/:userHeightId", component: UserHeightViewComponent },
       { path: "userweights/view/:userHeightId", component: UserWeightViewComponent },
 
-      { path: "events/add", component: eventAddComponent },
-      { path: "galleries/add", component: galleryAddComponent },
-      { path: "heights/add", component: heightAddComponent },
+      { path: "events/add", component: EventAddComponent },
+      { path: "galleries/add", component: GalleryAddComponent },
+      { path: "heights/add", component: HeightAddComponent },
       { path: "collaborations/add", component: CollaborationAddComponent },
-      { path: "recipes/add", component: recipeAddComponent },
+      { path: "recipes/add", component: RecipeAddComponent },
       { path: "weights/add", component: WeightAddComponent },
       { path: "users/add", component: UserAddComponent },
       { path: "operationclaims/add", component: OperationClaimAddComponent },
@@ -55,11 +70,11 @@ const routes: Routes = [
       { path: "userweights/add", component: UserWeightAddComponent },
 
 
-      { path: "events/update/:eventId", component: eventUpdateComponent },
-      { path: "galleries/update/:galleryId", component: galleryUpdateComponent },
-      { path: "heights/update/:heightId", component: heightUpdateComponent },
+      { path: "events/update/:eventId", component: EventUpdateComponent },
+      { path: "galleries/update/:galleryId", component: GalleryUpdateComponent },
+      { path: "heights/update/:heightId", component: HeightUpdateComponent },
       { path: "collaborations/update/:collaborationId", component: CollaborationUpdateComponent },
-      { path: "recipes/update/:recipeId", component: recipeUpdateComponent },
+      { path: "recipes/update/:recipeId", component: RecipeUpdateComponent },
       { path: "weights/update/:weightId", component: WeightUpdateComponent },
       { path: "users/update/:userId", component: UserUpdateComponent },
       { path: "operationclaims/update/:operationClaimId", component: OperationClaimUpdateComponent },
@@ -67,11 +82,11 @@ const routes: Routes = [
       { path: "userheights/update/:userHeightId", component: UserHeightUpdateComponent },
       { path: "userweights/update/:userHeightId", component: UserWeightUpdateComponent },
 
-      { path: "events/remove/:eventId", component: eventRemoveComponent },
-      { path: "galleries/remove/:galleryId", component: galleryRemoveComponent },
-      { path: "heights/remove/:heightId", component: heightRemoveComponent },
+      { path: "events/remove/:eventId", component: EventRemoveComponent },
+      { path: "galleries/remove/:galleryId", component: GalleryRemoveComponent },
+      { path: "heights/remove/:heightId", component: HeightRemoveComponent },
       { path: "collaborations/remove/:collaborationId", component: CollaborationRemoveComponent },
-      { path: "recipes/remove/:recipeId", component: recipeRemoveComponent },
+      { path: "recipes/remove/:recipeId", component: RecipeRemoveComponent },
       { path: "weights/remove/:weightId", component: WeightRemoveComponent },
       { path: "users/remove/:userId", component: UserRemoveComponent },
       { path: "operationclaims/remove/:operationClaimId", component: OperationClaimRemoveComponent },

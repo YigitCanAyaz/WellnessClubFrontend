@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { OperationClaimService } from 'src/app/services/concrete/operation-claim.service';
-
+import { OperationClaimService } from 'src/app/services/operation-claim.service';
 @Component({
   selector: 'app-operation-claim-add',
   templateUrl: './operation-claim-add.component.html',

@@ -8,23 +8,30 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './components/admin/admin-layout/admin-layout.component';
 import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
-import { CollaborationComponent } from './components/admin/collaboration/collaboration.component';
-import { EventComponent } from './components/admin/event/event.component';
-import { GalleryComponent } from './components/admin/gallery/gallery.component';
-import { HeightComponent } from './components/admin/height/height.component';
-import { OperationClaimComponent } from './components/admin/operation-claim/operation-claim.component';
-import { RecipeComponent } from './components/admin/recipe/recipe.component';
-import { UserComponent } from './components/admin/user/user.component';
-import { UserOperationClaimComponent } from './components/admin/user-operation-claim/user-operation-claim.component';
-import { UserHeightComponent } from './components/admin/user-height/user-height.component';
-import { UserWeightComponent } from './components/admin/user-weight/user-weight.component';
-import { WeightComponent } from './components/admin/weight/weight.component';
-import { AdminLoginComponent } from './components/admin/admin-login/admin-login.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { OperationClaimAddComponent } from './components/admin/operation-claim/operation-claim-add/operation-claim-add.component';
+import { OperationClaimListComponent } from './components/admin/operation-claim/operation-claim-list/operation-claim-list.component';
+import { OperationClaimRemoveComponent } from './components/admin/operation-claim/operation-claim-remove/operation-claim-remove.component';
+import { OperationClaimUpdateComponent } from './components/admin/operation-claim/operation-claim-update/operation-claim-update.component';
+import { OperationClaimViewComponent } from './components/admin/operation-claim/operation-claim-view/operation-claim-view.component';
+import { UserAddComponent } from './components/admin/user/user-add/user-add.component';
+import { UserListComponent } from './components/admin/user/user-list/user-list.component';
+import { UserRemoveComponent } from './components/admin/user/user-remove/user-remove.component';
+import { UserUpdateComponent } from './components/admin/user/user-update/user-update.component';
+import { UserViewComponent } from './components/admin/user/user-view/user-view.component';
+import { UserOperationClaimAddComponent } from './components/admin/user-operation-claim/user-operation-claim-add/user-operation-claim-add.component';
+import { UserOperationClaimListComponent } from './components/admin/user-operation-claim/user-operation-claim-list/user-operation-claim-list.component';
+import { UserOperationClaimRemoveComponent } from './components/admin/user-operation-claim/user-operation-claim-remove/user-operation-claim-remove.component';
+import { UserOperationClaimUpdateComponent } from './components/admin/user-operation-claim/user-operation-claim-update/user-operation-claim-update.component';
+import { UserOperationClaimViewComponent } from './components/admin/user-operation-claim/user-operation-claim-view/user-operation-claim-view.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -35,23 +42,31 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppComponent,
     AdminLayoutComponent,
     AdminDashboardComponent,
-    CollaborationComponent,
-    EventComponent,
-    GalleryComponent,
-    HeightComponent,
-    OperationClaimComponent,
-    RecipeComponent,
-    UserComponent,
-    UserOperationClaimComponent,
-    UserHeightComponent,
-    UserWeightComponent,
-    WeightComponent,
-    AdminLoginComponent
+    LoginComponent,
+    RegisterComponent,
+    OperationClaimAddComponent,
+    OperationClaimListComponent,
+    OperationClaimRemoveComponent,
+    OperationClaimUpdateComponent,
+    OperationClaimViewComponent,
+    UserAddComponent,
+    UserListComponent,
+    UserRemoveComponent,
+    UserUpdateComponent,
+    UserViewComponent,
+    UserOperationClaimAddComponent,
+    UserOperationClaimListComponent,
+    UserOperationClaimRemoveComponent,
+    UserOperationClaimUpdateComponent,
+    UserOperationClaimViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot({
       positionClass: "toast-bottom-right"
     }),

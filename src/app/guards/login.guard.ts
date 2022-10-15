@@ -19,7 +19,9 @@ export class LoginGuard implements CanActivate {
     if (this.authService.isAuthenticated()) {
       return true;
     } else {
-      this.router.navigate(["login"]);
+      this.router.navigate(["login"]).then(() => {
+        window.location.reload();
+      });
       this.toastrService.info("Sisteme giriş yapmalısınız");
       return false;
     }

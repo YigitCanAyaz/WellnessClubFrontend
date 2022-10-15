@@ -27,7 +27,9 @@ export class UserListComponent implements OnInit {
   }
 
   getUserViewById(userId: number): void {
-    this.router.navigate(["/admin/users/view/" + userId]);
+    this.router.navigate(["/admin/users/view/" + userId]).then(() => {
+      window.location.reload();
+    });
   }
 
 }

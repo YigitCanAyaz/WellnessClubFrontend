@@ -32,7 +32,9 @@ export class UserAddComponent implements OnInit {
     if (this.userAddForm.valid) {
       this.authService.register(this.userAddForm.value).subscribe(response => {
         this.toastrService.info("Başarıyla kullanıcı oluşturuldu, giriş sayfasına yönlendiriliyorsunuz...");
-        this.router.navigate(["/admin/users/list"])
+        this.router.navigate(["/admin/users/list"]).then(() => {
+          window.location.reload();
+        });
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

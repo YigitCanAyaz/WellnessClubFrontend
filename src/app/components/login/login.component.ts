@@ -32,7 +32,9 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.loginForm.value).subscribe(response => {
         this.toastrService.info("Başarıyla giriş yaptınız, admin sayfasına yönlendiriliyorsunuz..");
         localStorage.setItem("token", response.data.token);
-        this.router.navigate(["/admin"]);
+        this.router.navigate(["/admin"]).then(() => {
+          window.location.reload();
+        });
       }, responseError => {
         this.toastrService.error(responseError.error);
       });
@@ -44,7 +46,9 @@ export class LoginComponent implements OnInit {
   }
 
   redirectToRegister(): void {
-    this.router.navigate(["register"])
+    this.router.navigate(["register"]).then(() => {
+      window.location.reload();
+    });
   }
 
   // Form Input Check

@@ -26,7 +26,9 @@ export class EventListComponent implements OnInit {
   }
 
   getEventViewById(eventId: number): void {
-    this.router.navigate(["/admin/events/view/" + eventId]);
+    this.router.navigate(["/admin/events/view/" + eventId]).then(() => {
+      window.location.reload();
+    });
   }
 
 }

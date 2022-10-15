@@ -67,6 +67,7 @@ import { UserLastNameFilterPipePipe } from './pipes/user-last-name-filter-pipe.p
 import { CollaborationFilterPipePipe } from './pipes/collaboration-filter-pipe.pipe';
 import { DescriptionFilterPipePipe } from './pipes/description-filter-pipe.pipe';
 import { RecipeFilterPipePipe } from './pipes/recipe-filter-pipe.pipe';
+import { GalleryFilterPipePipe } from './pipes/gallery-filter-pipe.pipe';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -129,6 +130,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CollaborationFilterPipePipe,
     DescriptionFilterPipePipe,
     RecipeFilterPipePipe,
+    GalleryFilterPipePipe,
   ],
   imports: [
     BrowserModule,

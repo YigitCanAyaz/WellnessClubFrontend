@@ -17,11 +17,6 @@ import { GalleryListComponent } from './components/admin/gallery/gallery-list/ga
 import { GalleryRemoveComponent } from './components/admin/gallery/gallery-remove/gallery-remove.component';
 import { GalleryUpdateComponent } from './components/admin/gallery/gallery-update/gallery-update.component';
 import { GalleryViewComponent } from './components/admin/gallery/gallery-view/gallery-view.component';
-import { HeightAddComponent } from './components/admin/height/height-add/height-add.component';
-import { HeightListComponent } from './components/admin/height/height-list/height-list.component';
-import { HeightRemoveComponent } from './components/admin/height/height-remove/height-remove.component';
-import { HeightUpdateComponent } from './components/admin/height/height-update/height-update.component';
-import { HeightViewComponent } from './components/admin/height/height-view/height-view.component';
 import { OperationClaimAddComponent } from './components/admin/operation-claim/operation-claim-add/operation-claim-add.component';
 import { OperationClaimListComponent } from './components/admin/operation-claim/operation-claim-list/operation-claim-list.component';
 import { OperationClaimRemoveComponent } from './components/admin/operation-claim/operation-claim-remove/operation-claim-remove.component';
@@ -52,11 +47,6 @@ import { UserListComponent } from './components/admin/user/user-list/user-list.c
 import { UserRemoveComponent } from './components/admin/user/user-remove/user-remove.component';
 import { UserUpdateComponent } from './components/admin/user/user-update/user-update.component';
 import { UserViewComponent } from './components/admin/user/user-view/user-view.component';
-import { WeightAddComponent } from './components/admin/weight/weight-add/weight-add.component';
-import { WeightListComponent } from './components/admin/weight/weight-list/weight-list.component';
-import { WeightRemoveComponent } from './components/admin/weight/weight-remove/weight-remove.component';
-import { WeightUpdateComponent } from './components/admin/weight/weight-update/weight-update.component';
-import { WeightViewComponent } from './components/admin/weight/weight-view/weight-view.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginGuard } from './guards/login.guard';
@@ -75,10 +65,8 @@ const routes: Routes = [
 
       { path: "events/list", component: EventListComponent },
       { path: "galleries/list", component: GalleryListComponent },
-      { path: "heights/list", component: HeightListComponent },
       { path: "collaborations/list", component: CollaborationListComponent },
       { path: "recipes/list", component: RecipeListComponent },
-      { path: "weights/list", component: WeightListComponent },
       { path: "users/list", component: UserListComponent },
       { path: "operationclaims/list", component: OperationClaimListComponent },
       { path: "useroperationclaims/list", component: UserOperationClaimListComponent },
@@ -87,10 +75,8 @@ const routes: Routes = [
 
       { path: "events/view/:eventId", component: EventViewComponent },
       { path: "galleries/view/:galleryId", component: GalleryViewComponent },
-      { path: "heights/view/:heightId", component: HeightViewComponent },
       { path: "collaborations/view/:collaborationId", component: CollaborationViewComponent },
       { path: "recipes/view/:recipeId", component: RecipeViewComponent },
-      { path: "weights/view/:weightId", component: WeightViewComponent },
       { path: "users/view/:userId", component: UserViewComponent },
       { path: "operationclaims/view/:operationClaimId", component: OperationClaimViewComponent },
       { path: "useroperationclaims/view/:userOperationClaimId", component: UserOperationClaimViewComponent },
@@ -99,10 +85,8 @@ const routes: Routes = [
 
       { path: "events/add", component: EventAddComponent },
       { path: "galleries/add", component: GalleryAddComponent },
-      { path: "heights/add", component: HeightAddComponent },
       { path: "collaborations/add", component: CollaborationAddComponent },
       { path: "recipes/add", component: RecipeAddComponent },
-      { path: "weights/add", component: WeightAddComponent },
       { path: "users/add", component: UserAddComponent },
       { path: "operationclaims/add", component: OperationClaimAddComponent },
       { path: "useroperationclaims/add", component: UserOperationClaimAddComponent },
@@ -112,10 +96,8 @@ const routes: Routes = [
 
       { path: "events/update/:eventId", component: EventUpdateComponent },
       { path: "galleries/update/:galleryId", component: GalleryUpdateComponent },
-      { path: "heights/update/:heightId", component: HeightUpdateComponent },
       { path: "collaborations/update/:collaborationId", component: CollaborationUpdateComponent },
       { path: "recipes/update/:recipeId", component: RecipeUpdateComponent },
-      { path: "weights/update/:weightId", component: WeightUpdateComponent },
       { path: "users/update/:userId", component: UserUpdateComponent },
       { path: "operationclaims/update/:operationClaimId", component: OperationClaimUpdateComponent },
       { path: "useroperationclaims/update/:userOperationClaimId", component: UserOperationClaimUpdateComponent },
@@ -124,10 +106,8 @@ const routes: Routes = [
 
       { path: "events/remove/:eventId", component: EventRemoveComponent },
       { path: "galleries/remove/:galleryId", component: GalleryRemoveComponent },
-      { path: "heights/remove/:heightId", component: HeightRemoveComponent },
       { path: "collaborations/remove/:collaborationId", component: CollaborationRemoveComponent },
       { path: "recipes/remove/:recipeId", component: RecipeRemoveComponent },
-      { path: "weights/remove/:weightId", component: WeightRemoveComponent },
       { path: "users/remove/:userId", component: UserRemoveComponent },
       { path: "operationclaims/remove/:operationClaimId", component: OperationClaimRemoveComponent },
       { path: "useroperationclaims/remove/:userOperationClaimId", component: UserOperationClaimRemoveComponent },

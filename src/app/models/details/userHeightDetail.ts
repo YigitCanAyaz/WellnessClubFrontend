@@ -1,4 +1,4 @@
-export interface UserWeightDetailDto {
+export interface UserHeightDetail {
   id: number;
   userId: number;
   firstName: string;
@@ -7,5 +7,5 @@ export interface UserWeightDetailDto {
   gender: boolean;
   birthDate: Date;
   status: boolean;
-  kilogram: number;
+  meter: number;
 }

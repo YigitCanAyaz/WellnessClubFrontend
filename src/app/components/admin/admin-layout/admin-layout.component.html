@@ -1,12 +1,12 @@
 <!-- <div class="row mt-5">
   <div class="col-md-2">
     <ul class="list-group">
-      <a class="list-group-item" routerLink="/admin/brands/list">Brands</a>
+      <a class="list-group-item" routerLink="/admin/events/list">Events</a>
       <a class="list-group-item" routerLink="/admin/cars/list">Cars</a>
-      <a class="list-group-item" routerLink="/admin/colors/list">Colors</a>
+      <a class="list-group-item" routerLink="/admin/collaborations/list">Collaborations</a>
       <a class="list-group-item" routerLink="/admin/customers/list">Customers</a>
       <a class="list-group-item" routerLink="/admin/models/list">Models</a>
-      <a class="list-group-item" routerLink="/admin/rentals/list">Rentals</a>
+      <a class="list-group-item" routerLink="/admin/recipes/list">Recipes</a>
     </ul>
   </div>
   <div class="col-md-10">
@@ -185,40 +185,52 @@
               <span>Dashboard</span>
             </a>
           </li>
-          <li [class]="checkActive(brandActive)" (click)="setAndRemoveActive('brands')">
-            <a routerLink="/admin/brands/list">
-              <i class="fa fa-industry" aria-hidden="true"></i>
-              <span>Brands</span>
+          <li [class]="checkActive(eventActive)" (click)="setAndRemoveActive('events')">
+            <a routerLink="/admin/events/list">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span>Events</span>
             </a>
           </li>
-          <li [class]="checkActive(carActive)" (click)="setAndRemoveActive('cars')">
-            <a routerLink="/admin/cars/list">
-              <i class="fa fa-car" aria-hidden="true"></i>
-              <span>Cars</span>
-            </a>
-          </li>
-          <li [class]="checkActive(carImageActive)" (click)="setAndRemoveActive('carimages')">
-            <a routerLink="/admin/carimages/list">
+          <li [class]="checkActive(galleryActive)" (click)="setAndRemoveActive('galleries')">
+            <a routerLink="/admin/galleries/list">
               <i class="fa fa-picture-o" aria-hidden="true"></i>
-              <span>Car Images</span>
+              <span>Galleries</span>
             </a>
           </li>
-          <li [class]="checkActive(colorActive)" (click)="setAndRemoveActive('colors')">
-            <a routerLink="/admin/colors/list">
-              <i class="fa fa-paint-brush" aria-hidden="true"></i>
-              <span>Colors</span>
+          <li [class]="checkActive(collaborationActive)" (click)="setAndRemoveActive('collaborations')">
+            <a routerLink="/admin/collaborations/list">
+              <i class="fa fa-briefcase" aria-hidden="true"></i>
+              <span>Collaborations</span>
             </a>
           </li>
-          <li [class]="checkActive(rentalActive)" (click)="setAndRemoveActive('rentals')">
-            <a routerLink="/admin/rentals/list">
-              <i class="fa fa-folder-open" aria-hidden="true"></i>
-              <span>Rentals</span>
+          <li [class]="checkActive(recipeActive)" (click)="setAndRemoveActive('recipes')">
+            <a routerLink="/admin/recipes/list">
+              <i class="fa fa-cutlery" aria-hidden="true"></i>
+              <span>Recipes</span>
             </a>
           </li>
-          <li [class]="checkActive(customerActive)" (click)="setAndRemoveActive('customers')">
-            <a routerLink="/admin/customers/list">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span>Customers</span>
+          <li [class]="checkActive(heightActive)" (click)="setAndRemoveActive('heights')">
+            <a routerLink="/admin/heights/list">
+              <i class="fa fa-text-height" aria-hidden="true"></i>
+              <span>Heights</span>
+            </a>
+          </li>
+          <li [class]="checkActive(weightActive)" (click)="setAndRemoveActive('weights')">
+            <a routerLink="/admin/weights/list">
+              <i class="fa fa-text-width" aria-hidden="true"></i>
+              <span>Weights</span>
+            </a>
+          </li>
+          <li [class]="checkActive(userHeightActive)" (click)="setAndRemoveActive('userheights')">
+            <a routerLink="/admin/userheights/list">
+              <i class="fa fa-child fa-4x" aria-hidden="true"></i>
+              <span>User Heights</span>
+            </a>
+          </li>
+          <li [class]="checkActive(userWeightActive)" (click)="setAndRemoveActive('userweights')">
+            <a routerLink="/admin/userweights/list">
+              <i class="fa fa-male" aria-hidden="true"></i>
+              <span>User Weights</span>
             </a>
           </li>
           <li [class]="checkActive(userActive)" (click)="setAndRemoveActive('users')">
@@ -239,18 +251,6 @@
               <span>User Operation Claims</span>
             </a>
           </li>
-          <li [class]="checkActive(modelActive)" (click)="setAndRemoveActive('models')">
-            <a routerLink="/admin/models/list">
-              <i class="fa fa-taxi" aria-hidden="true"></i>
-              <span>Models</span>
-            </a>
-          </li>
-          <li [class]="checkActive(modelColorActive)" (click)="setAndRemoveActive('modelcolors')">
-            <a routerLink="/admin/modelcolors/list">
-              <i class="fa fa-paint-brush" aria-hidden="true"></i>
-              <span>Model Colors</span>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -266,7 +266,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 col-sm-6">
-            <p class="mb-0 text-muted">ColoredStrategies 2019</p>
+            <p class="mb-0 text-muted">CollaborationedStrategies 2019</p>
           </div>
           <div class="col-sm-6 d-none d-sm-block">
             <ul class="breadcrumb pt-0 pr-0 float-right">

@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.valid) {
       this.authService.register(this.registerForm.value).subscribe(response => {
         this.toastrService.info("Başarıyla kullanıcı oluşturuldu, giriş sayfasına yönlendiriliyorsunuz...");
-        this.router.navigate(["/login"])
+        this.router.navigate(["/"])
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

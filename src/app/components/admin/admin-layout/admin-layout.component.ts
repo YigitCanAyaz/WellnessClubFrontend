@@ -10,17 +10,17 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 export class AdminLayoutComponent implements OnInit {
 
   dashboardActivate: boolean = false;
-  brandActive: boolean = false;
-  carActive: boolean = false;
-  customerActive: boolean = false;
-  colorActive: boolean = false;
-  modelActive: boolean = false;
-  modelColorActive: boolean = false;
-  rentalActive: boolean = false;
+  eventActive: boolean = false;
+  collaborationActive: boolean = false;
+  galleryActive: boolean = false;
+  heightActive: boolean = false;
+  weightActive: boolean = false;
+  userWeightActive: boolean = false;
+  recipeActive: boolean = false;
   userActive: boolean = false;
   operationClaimActive: boolean = false;
   userOperationClaimActive: boolean = false;
-  carImageActive: boolean = false;
+  userHeightActive: boolean = false;
 
   public config: PerfectScrollbarConfigInterface = {};
 
@@ -42,37 +42,37 @@ export class AdminLayoutComponent implements OnInit {
   setAndRemoveActive(menuName: string) {
 
     this.dashboardActivate = false;
-    this.brandActive = false;
-    this.carActive = false;
-    this.customerActive = false;
-    this.colorActive = false;
-    this.modelActive = false;
-    this.modelColorActive = false;
-    this.rentalActive = false;
+    this.eventActive = false;
+    this.collaborationActive = false;
+    this.galleryActive = false;
+    this.heightActive = false;
+    this.weightActive = false;
+    this.userWeightActive = false;
+    this.recipeActive = false;
     this.userActive = false;
     this.userOperationClaimActive = false;
     this.operationClaimActive = false;
-    this.carImageActive = false;
+    this.userHeightActive = false;
 
 
     switch (menuName) {
       case '':
         this.dashboardActivate = true;
         break;
-      case 'brands':
-        this.brandActive = true;
+      case 'events':
+        this.eventActive = true;
         break;
-      case 'cars':
-        this.carActive = true;
+      case 'collaborations':
+        this.collaborationActive = true;
         break;
-      case 'carimages':
-        this.carImageActive = true;
+      case 'userheights':
+        this.userHeightActive = true;
         break;
-      case 'colors':
-        this.colorActive = true;
+      case 'heights':
+        this.heightActive = true;
         break;
-      case 'customers':
-        this.customerActive = true;
+      case 'galleries':
+        this.galleryActive = true;
         break;
       case 'users':
         this.userActive = true;
@@ -83,14 +83,14 @@ export class AdminLayoutComponent implements OnInit {
       case 'useroperationclaims':
         this.userOperationClaimActive = true;
         break;
-      case 'models':
-        this.modelActive = true;
+      case 'weights':
+        this.weightActive = true;
         break;
-      case 'modelcolors':
-        this.modelColorActive = true;
+      case 'userweights':
+        this.userWeightActive = true;
         break;
-      case 'rentals':
-        this.rentalActive = true;
+      case 'recipes':
+        this.recipeActive = true;
         break;
 
       default:

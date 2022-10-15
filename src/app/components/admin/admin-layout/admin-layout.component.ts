@@ -13,8 +13,6 @@ export class AdminLayoutComponent implements OnInit {
   eventActive: boolean = false;
   collaborationActive: boolean = false;
   galleryActive: boolean = false;
-  heightActive: boolean = false;
-  weightActive: boolean = false;
   userWeightActive: boolean = false;
   recipeActive: boolean = false;
   userActive: boolean = false;
@@ -45,8 +43,6 @@ export class AdminLayoutComponent implements OnInit {
     this.eventActive = false;
     this.collaborationActive = false;
     this.galleryActive = false;
-    this.heightActive = false;
-    this.weightActive = false;
     this.userWeightActive = false;
     this.recipeActive = false;
     this.userActive = false;
@@ -68,9 +64,6 @@ export class AdminLayoutComponent implements OnInit {
       case 'userheights':
         this.userHeightActive = true;
         break;
-      case 'heights':
-        this.heightActive = true;
-        break;
       case 'galleries':
         this.galleryActive = true;
         break;
@@ -82,9 +75,6 @@ export class AdminLayoutComponent implements OnInit {
         break;
       case 'useroperationclaims':
         this.userOperationClaimActive = true;
-        break;
-      case 'weights':
-        this.weightActive = true;
         break;
       case 'userweights':
         this.userWeightActive = true;

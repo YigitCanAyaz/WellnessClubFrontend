@@ -62,16 +62,6 @@ import { UserWeightUpdateComponent } from './components/admin/user-weight/user-w
 import { UserWeightViewComponent } from './components/admin/user-weight/user-weight-view/user-weight-view.component';
 import { UserWeightListComponent } from './components/admin/user-weight/user-weight-list/user-weight-list.component';
 import { UserWeightRemoveComponent } from './components/admin/user-weight/user-weight-remove/user-weight-remove.component';
-import { HeightAddComponent } from './components/admin/height/height-add/height-add.component';
-import { HeightViewComponent } from './components/admin/height/height-view/height-view.component';
-import { HeightListComponent } from './components/admin/height/height-list/height-list.component';
-import { HeightUpdateComponent } from './components/admin/height/height-update/height-update.component';
-import { HeightRemoveComponent } from './components/admin/height/height-remove/height-remove.component';
-import { WeightAddComponent } from './components/admin/weight/weight-add/weight-add.component';
-import { WeightUpdateComponent } from './components/admin/weight/weight-update/weight-update.component';
-import { WeightListComponent } from './components/admin/weight/weight-list/weight-list.component';
-import { WeightRemoveComponent } from './components/admin/weight/weight-remove/weight-remove.component';
-import { WeightViewComponent } from './components/admin/weight/weight-view/weight-view.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -129,16 +119,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UserWeightViewComponent,
     UserWeightListComponent,
     UserWeightRemoveComponent,
-    HeightAddComponent,
-    HeightViewComponent,
-    HeightListComponent,
-    HeightUpdateComponent,
-    HeightRemoveComponent,
-    WeightAddComponent,
-    WeightUpdateComponent,
-    WeightListComponent,
-    WeightRemoveComponent,
-    WeightViewComponent,
   ],
   imports: [
     BrowserModule,

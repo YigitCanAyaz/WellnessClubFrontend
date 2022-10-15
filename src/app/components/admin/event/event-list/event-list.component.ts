@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-list',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventListComponent implements OnInit {
 
-  constructor() { }
+  events: Event[] = [];
+  filterText: string = "";
+
+  constructor(private eventService: EventService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getAllEvents();
+  }
+
+  getAllEvents(): void {
+    this.eventService.getAll().subscribe(response => {
+      this.events = response.data;
+    })
+  }
+
+  getEventViewById(eventId: number): void {
+    this.router.navigate(["/admin/events/view/" + eventId]);
   }
 
 }

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Event } from '../models/entities/event';
 import { ListResponseModel } from '../models/listResponseModel';
 import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
@@ -29,8 +30,9 @@ export class EventService {
     return this.httpClient.get<SingleResponseModel<Event>>(path);
   }
 
-  add(event: Event): Observable<ResponseModel> {
-    return this.httpClient.post<ResponseModel>(this.baseUrl + "add", event);
+  add(evt: Event): Observable<ResponseModel> {
+    console.log(evt);
+    return this.httpClient.post<ResponseModel>(this.baseUrl + "add", evt);
   }
 
   update(event: Event): Observable<ResponseModel> {

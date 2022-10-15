@@ -62,6 +62,7 @@ import { UserWeightUpdateComponent } from './components/admin/user-weight/user-w
 import { UserWeightViewComponent } from './components/admin/user-weight/user-weight-view/user-weight-view.component';
 import { UserWeightListComponent } from './components/admin/user-weight/user-weight-list/user-weight-list.component';
 import { UserWeightRemoveComponent } from './components/admin/user-weight/user-weight-remove/user-weight-remove.component';
+import { EventFilterPipePipe } from './pipes/event-filter-pipe.pipe';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -119,6 +120,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UserWeightViewComponent,
     UserWeightListComponent,
     UserWeightRemoveComponent,
+    EventFilterPipePipe,
   ],
   imports: [
     BrowserModule,

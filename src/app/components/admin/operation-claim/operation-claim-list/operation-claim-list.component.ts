@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { OperationClaim } from 'src/app/models/entities/operationClaim';
+import { OperationClaimService } from 'src/app/services/operation-claim.service';
 
 @Component({
   selector: 'app-operation-claim-list',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperationClaimListComponent implements OnInit {
 
-  constructor() { }
+  operationClaims: OperationClaim[] = [];
+  filterText: string = "";
+
+  constructor(private operationClaimService: OperationClaimService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getAllOperationClaims();
   }
+
+  getAllOperationClaims(): void {
+    this.operationClaimService.getAll().subscribe(response => {
+      this.operationClaims = response.data;
+    })
+  }
+
+  getOperationClaimViewById(operationClaimId: number): void {
+    this.router.navigate(["/admin/operationclaims/view/" + operationClaimId]);
+  }
+
 
 }

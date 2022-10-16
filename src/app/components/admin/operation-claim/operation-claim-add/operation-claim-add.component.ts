@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { OperationClaimService } from 'src/app/services/operation-claim.service';
+
 @Component({
   selector: 'app-operation-claim-add',
   templateUrl: './operation-claim-add.component.html',
@@ -28,9 +29,7 @@ export class OperationClaimAddComponent implements OnInit {
     if (this.operationClaimAddForm.valid) {
       this.operationClaimService.add(this.operationClaimAddForm.value).subscribe(response => {
         this.toastrService.info(response.message, this.operationClaimAddForm.controls['name'].value);
-        this.router.navigate(["/admin/operationclaims/list"]).then(() => {
-          window.location.reload();
-        });
+        this.router.navigate(["/admin/operationclaims/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

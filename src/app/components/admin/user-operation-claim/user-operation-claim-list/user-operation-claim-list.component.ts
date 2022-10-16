@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserOperationClaimDetail } from 'src/app/models/details/userOperationClaimDetail';
+import { UserOperationClaimService } from 'src/app/services/user-operation-claim.service';
 
 @Component({
   selector: 'app-user-operation-claim-list',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserOperationClaimListComponent implements OnInit {
 
-  constructor() { }
+  userOperationClaimDetails: UserOperationClaimDetail[] = [];
+  filterText: string = "";
+
+  constructor(private userOperationClaimService: UserOperationClaimService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getAllUserOperationClaimDetails();
+  }
+
+  getAllUserOperationClaimDetails(): void {
+    this.userOperationClaimService.getAllUserOperationClaimDetails().subscribe(response => {
+      this.userOperationClaimDetails = response.data;
+    })
+  }
+
+  getUserOperationClaimDetailViewById(userOperationClaimId: number): void {
+    this.router.navigate(["/admin/useroperationclaims/view/" + userOperationClaimId]);
   }
 
 }

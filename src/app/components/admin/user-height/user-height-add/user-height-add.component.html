@@ -27,10 +27,6 @@
       <div class="card-body">
         <form [formGroup]="userheightAddForm" (ngSubmit)="addUserHeight()">
           <div class="form-group">
-            <label for="name">Name</label>
-            <input formControlName="name" type="text" class="form-control" id="name">
-          </div>
-          <div class="form-group">
             <label for="userId">User</label>
             <select formControlName="userId" id="userId" class="form-control">
               <option label="&nbsp;">&nbsp;</option>
@@ -39,8 +35,8 @@
               </select>
           </div>
           <div class="form-group">
-            <label for="year">Year</label>
-            <input formControlName="year" type="number" class="form-control" id="year">
+            <label for="meter">Meter</label>
+            <input formControlName="meter" type="number" class="form-control" id="meter" placeholder="Example: 1.80">
           </div>
           <button type="submit" class="btn btn-success mb-0 mt-1">Submit</button>
         </form>

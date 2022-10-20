@@ -25,9 +25,8 @@ export class UserHeightAddComponent implements OnInit {
 
   createUserHeightAddForm(): void {
     this.userheightAddForm = this.formBuilder.group({
-      name: ["", [Validators.required]],
       userId: ["", [Validators.required]],
-      year: ["", [Validators.required]]
+      meter: ["", [Validators.required]]
     });
   }
 
@@ -36,7 +35,7 @@ export class UserHeightAddComponent implements OnInit {
     console.log(this.userheightAddForm.value);
     if (this.userheightAddForm.valid) {
       this.userHeightService.add(this.userheightAddForm.value).subscribe(response => {
-        this.toastrService.info(response.message, this.userheightAddForm.controls['name'].value);
+        this.toastrService.info(response.message);
         this.router.navigate(["/admin/userheights/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);

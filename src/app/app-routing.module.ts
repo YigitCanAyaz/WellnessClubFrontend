@@ -81,7 +81,7 @@ const routes: Routes = [
       { path: "operationclaims/view/:operationClaimId", component: OperationClaimViewComponent },
       { path: "useroperationclaims/view/:userOperationClaimId", component: UserOperationClaimViewComponent },
       { path: "userheights/view/:userHeightId", component: UserHeightViewComponent },
-      { path: "userweights/view/:userHeightId", component: UserWeightViewComponent },
+      { path: "userweights/view/:userWeightId", component: UserWeightViewComponent },
 
       { path: "events/add", component: EventAddComponent },
       { path: "galleries/add", component: GalleryAddComponent },
@@ -102,7 +102,7 @@ const routes: Routes = [
       { path: "operationclaims/update/:operationClaimId", component: OperationClaimUpdateComponent },
       { path: "useroperationclaims/update/:userOperationClaimId", component: UserOperationClaimUpdateComponent },
       { path: "userheights/update/:userHeightId", component: UserHeightUpdateComponent },
-      { path: "userweights/update/:userHeightId", component: UserWeightUpdateComponent },
+      { path: "userweights/update/:userWeightId", component: UserWeightUpdateComponent },
 
       { path: "events/remove/:eventId", component: EventRemoveComponent },
       { path: "galleries/remove/:galleryId", component: GalleryRemoveComponent },
@@ -112,7 +112,7 @@ const routes: Routes = [
       { path: "operationclaims/remove/:operationClaimId", component: OperationClaimRemoveComponent },
       { path: "useroperationclaims/remove/:userOperationClaimId", component: UserOperationClaimRemoveComponent },
       { path: "userheights/remove/:userHeightId", component: UserHeightRemoveComponent },
-      { path: "userweights/remove/:userHeightId", component: UserWeightRemoveComponent },
+      { path: "userweights/remove/:userWeightId", component: UserWeightRemoveComponent },
 
     ]
   },

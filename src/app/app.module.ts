@@ -71,6 +71,7 @@ import { GalleryFilterPipePipe } from './pipes/gallery-filter-pipe.pipe';
 import { OperationClaimFilterPipePipe } from './pipes/operation-claim-filter-pipe.pipe';
 import { UserOperationClaimDetailFilterPipePipe } from './pipes/user-operation-claim-detail-filter-pipe.pipe';
 import { UserHeightDetailFilterPipePipe } from './pipes/user-height-detail-filter-pipe.pipe';
+import { UserWeightDetailFilterPipePipe } from './pipes/user-weight-detail-filter-pipe.pipe';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -137,6 +138,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     OperationClaimFilterPipePipe,
     UserOperationClaimDetailFilterPipePipe,
     UserHeightDetailFilterPipePipe,
+    UserWeightDetailFilterPipePipe,
   ],
   imports: [
     BrowserModule,

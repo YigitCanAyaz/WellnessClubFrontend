@@ -26,7 +26,9 @@ export class OperationClaimListComponent implements OnInit {
   }
 
   getOperationClaimViewById(operationClaimId: number): void {
-    this.router.navigate(["/admin/operationclaims/view/" + operationClaimId]);
+    this.router.navigate(["/admin/operationclaims/view/" + operationClaimId]).then(() => {
+      window.location.reload();
+    });
   }
 
 

@@ -48,7 +48,9 @@ export class UserWeightUpdateComponent implements OnInit {
     if (this.userWeightUpdateForm.valid) {
       this.userWeightService.update(this.userWeightUpdateForm.value).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/userweights/list"]);
+        this.router.navigate(["/admin/userweights/list"]).then(() => {
+          window.location.reload();
+        });
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

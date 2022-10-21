@@ -30,7 +30,9 @@ export class UserHeightRemoveComponent implements OnInit {
   removeUserHeight(userHeight: UserHeight): void {
     this.userHeightService.delete(userHeight).subscribe(response => {
       this.toastrService.warning(response.message);
-      this.router.navigate(['/admin/userheights/list']);
+      this.router.navigate(['/admin/userheights/list']).then(() => {
+        window.location.reload();
+      });
     });
   }
 

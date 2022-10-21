@@ -48,7 +48,9 @@ export class UserHeightUpdateComponent implements OnInit {
     if (this.userHeightUpdateForm.valid) {
       this.userHeightService.update(this.userHeightUpdateForm.value).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/userheights/list"]);
+        this.router.navigate(["/admin/userheights/list"]).then(() => {
+          window.location.reload();
+        });
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

@@ -26,7 +26,9 @@ export class UserHeightListComponent implements OnInit {
   }
 
   getUserHeightDetailViewById(userHeightId: number): void {
-    this.router.navigate(["/admin/userheights/view/" + userHeightId]);
+    this.router.navigate(["/admin/userheights/view/" + userHeightId]).then(() => {
+      window.location.reload();
+    });
   }
 
 }

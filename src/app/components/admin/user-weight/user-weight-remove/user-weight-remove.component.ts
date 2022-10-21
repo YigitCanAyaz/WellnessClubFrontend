@@ -30,7 +30,9 @@ export class UserWeightRemoveComponent implements OnInit {
   removeUserWeight(userWeight: UserWeight): void {
     this.userWeightService.delete(userWeight).subscribe(response => {
       this.toastrService.warning(response.message);
-      this.router.navigate(['/admin/userweights/list']);
+      this.router.navigate(['/admin/userweights/list']).then(() => {
+        window.location.reload();
+      });
     });
   }
 

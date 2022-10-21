@@ -26,7 +26,9 @@ export class UserWeightListComponent implements OnInit {
   }
 
   getUserWeightDetailViewById(userWeightId: number): void {
-    this.router.navigate(["/admin/userweights/view/" + userWeightId]);
+    this.router.navigate(["/admin/userweights/view/" + userWeightId]).then(() => {
+      window.location.reload();
+    });
   }
 
 }

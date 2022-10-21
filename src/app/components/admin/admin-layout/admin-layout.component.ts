@@ -37,6 +37,10 @@ export class AdminLayoutComponent implements OnInit {
     return menuActive ? "active" : "";
   }
 
+  goTo(url: string): void {
+    window.open(url, "_blank");
+  }
+
   setAndRemoveActive(menuName: string) {
 
     this.dashboardActivate = false;

@@ -29,7 +29,7 @@ export class AdminLayoutComponent implements OnInit {
     if (currentComponent !== undefined) {
       this.setAndRemoveActive(currentComponent);
     } else {
-      this.setAndRemoveActive("");
+      this.setAndRemoveActive('');
     }
   }
 

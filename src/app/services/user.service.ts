@@ -24,4 +24,9 @@ export class UserService {
     return this.httpClient.get<SingleResponseModel<UserForInfoDetail>>(path);
   }
 
+  getAllUserLength(): Observable<SingleResponseModel<number>> {
+    const path = this.baseUrl + 'getalluserlength';
+    return this.httpClient.get<SingleResponseModel<number>>(path);
+  }
+
 }

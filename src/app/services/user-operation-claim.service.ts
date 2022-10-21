@@ -47,4 +47,9 @@ export class UserOperationClaimService {
     return this.httpClient.get<ListResponseModel<UserOperationClaimDetail>>(path);
   }
 
+  getAllUserOperationClaimLength(): Observable<SingleResponseModel<number>> {
+    const path = this.baseUrl + 'getalluseroperationclaimlength';
+    return this.httpClient.get<SingleResponseModel<number>>(path);
+  }
+
 }

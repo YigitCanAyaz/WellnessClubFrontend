@@ -37,4 +37,9 @@ export class OperationClaimService {
     return this.httpClient.post<ResponseModel>(this.baseUrl + "delete", operationClaim);
   }
 
+  getAllOperationClaimLength(): Observable<SingleResponseModel<number>> {
+    const path = this.baseUrl + 'getalloperationclaimlength';
+    return this.httpClient.get<SingleResponseModel<number>>(path);
+  }
+
 }

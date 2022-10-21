@@ -1,3 +1,5 @@
+import { OperationClaimService } from 'src/app/services/operation-claim.service';
+import { UserOperationClaimService } from 'src/app/services/user-operation-claim.service';
 import { UserHeightService } from 'src/app/services/user-height.service';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { CollaborationService } from 'src/app/services/collaboration.service';
@@ -5,6 +7,7 @@ import { GalleryService } from 'src/app/services/gallery.service';
 import { EventService } from 'src/app/services/event.service';
 import { Component, OnInit } from '@angular/core';
 import { UserWeightService } from 'src/app/services/user-weight.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -19,9 +22,13 @@ export class AdminDashboardComponent implements OnInit {
   recipeLength: number;
   userHeightLength: number;
   userWeightLength: number;
+  userLength: number;
+  userOperationClaimLength: number;
+  operationClaimLength: number;
 
   constructor(private eventService: EventService, private galleryService: GalleryService, private collaborationService: CollaborationService,
-    private recipeService: RecipeService, private userHeightService: UserHeightService, private userWeightService: UserWeightService) { }
+    private recipeService: RecipeService, private userHeightService: UserHeightService, private userWeightService: UserWeightService,
+    private userService: UserService, private userOperationClaimService: UserOperationClaimService, private operationClaimService: OperationClaimService) { }
 
   ngOnInit(): void {
     this.getAllEventLength();
@@ -30,6 +37,9 @@ export class AdminDashboardComponent implements OnInit {
     this.getAllRecipeLength();
     this.getAllUserHeightLength();
     this.getAllUserWeightLength();
+    this.getAllUserLength();
+    this.getAllUserOperationClaimLength();
+    this.getAllOperationClaimLength();
   }
 
   getAllEventLength(): void {
@@ -65,6 +75,24 @@ export class AdminDashboardComponent implements OnInit {
   getAllUserWeightLength(): void {
     this.userWeightService.getAllUserWeightLength().subscribe(response => {
       this.userWeightLength = response.data;
+    })
+  }
+
+  getAllUserLength(): void {
+    this.userService.getAllUserLength().subscribe(response => {
+      this.userWeightLength = response.data;
+    })
+  }
+
+  getAllUserOperationClaimLength(): void {
+    this.userOperationClaimService.getAllUserOperationClaimLength().subscribe(response => {
+      this.userOperationClaimLength = response.data;
+    })
+  }
+
+  getAllOperationClaimLength(): void {
+    this.operationClaimService.getAllOperationClaimLength().subscribe(response => {
+      this.operationClaimLength = response.data;
     })
   }
 }

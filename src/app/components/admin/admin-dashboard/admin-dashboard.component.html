@@ -96,4 +96,49 @@
         </div>
     </div>
   </div>
+  <div class="col-lg-4" *ngIf="userLength !== null">
+    <div class="card mb-4 progress-banner">
+        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+            <div class="d-inline-block">
+                <i class="fa fa-users fa-4x mr-2 text-white align-text-bottom d-inline-block"></i>
+            </div>
+            <p class="lead text-white">Users</p>
+            <div>
+                <div role="progressbar" class="mb-2 progress-bar-circle progress-bar-banner position-relative" data-color="white" data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="12" data-show-percent="false">
+                  <div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: white;">{{userLength}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-lg-4" *ngIf="operationClaimLength !== null">
+    <div class="card mb-4 progress-banner">
+        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+            <div class="d-inline-block">
+                <i class="fa fa-thumb-tack fa-4x mr-2 text-white align-text-bottom d-inline-block"></i>
+            </div>
+            <p class="lead text-white">Operation Claims</p>
+            <div>
+                <div role="progressbar" class="mb-2 progress-bar-circle progress-bar-banner position-relative" data-color="white" data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="12" data-show-percent="false">
+                  <div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: white;">{{operationClaimLength}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-lg-4" *ngIf="userOperationClaimLength !== null">
+    <div class="card mb-4 progress-banner">
+        <div class="card-body justify-content-between d-flex flex-row align-items-center">
+            <div class="d-inline-block">
+                <i class="fa fa-address-book fa-4x mr-2 text-white align-text-bottom d-inline-block"></i>
+            </div>
+            <p class="lead text-white">User Operation Claims</p>
+            <div>
+                <div role="progressbar" class="mb-2 progress-bar-circle progress-bar-banner position-relative" data-color="white" data-trail-color="rgba(255,255,255,0.2)" aria-valuenow="5" aria-valuemax="12" data-show-percent="false">
+                  <div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: white;">{{userOperationClaimLength}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 </div>

@@ -37,9 +37,7 @@ export class CollaborationAddComponent implements OnInit {
       formData.append("description", this.collaborationAddForm.get('description')?.value);
       this.collaborationService.add(formData).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/collaborations/list"]).then(() => {
-          window.location.reload();
-        });
+        this.router.navigate(["/admin/collaborations/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

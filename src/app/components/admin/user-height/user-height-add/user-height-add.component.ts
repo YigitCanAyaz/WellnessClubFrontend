@@ -36,9 +36,7 @@ export class UserHeightAddComponent implements OnInit {
     if (this.userheightAddForm.valid) {
       this.userHeightService.add(this.userheightAddForm.value).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/userheights/list"]).then(() => {
-          window.location.reload();
-        });
+        this.router.navigate(["/admin/userheights/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

@@ -50,9 +50,7 @@ export class GalleryUpdateComponent implements OnInit {
       formData.append("imageName", this.galleryUpdateForm.get('imageName')?.value);
       this.galleryService.update(formData).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/galleries/list"]).then(() => {
-          window.location.reload();
-        });
+        this.router.navigate(["/admin/galleries/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

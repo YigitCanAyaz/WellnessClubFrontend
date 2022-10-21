@@ -52,9 +52,7 @@ export class CollaborationUpdateComponent implements OnInit {
       formData.append("description", this.collaborationUpdateForm.get('description')?.value);
       this.collaborationService.update(formData).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/collaborations/list"]).then(() => {
-          window.location.reload();
-        });
+        this.router.navigate(["/admin/collaborations/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

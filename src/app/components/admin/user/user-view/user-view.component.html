@@ -18,29 +18,6 @@
       <div class="card-header">
         <div class="row mt-3">
           <div class="col-sm-12">
-            <button type="button" class="btn btn-danger ml-2" data-toggle="modal" data-target="#removeUser"><i
-                class="fa fa-trash fa-lg"></i></button>
-            <div class="modal fade" id="removeUser" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class="modal-title">This Process Cannot Be Undone!
-                    </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    Do you really want to delete this user?
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-danger"
-                      routerLink="/admin/users/remove/{{user.id}}">Remove</button>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="float-left">
               <button type="button" class="btn btn-primary" routerLink="/admin/users/list"><i
                   class="fa fa-arrow-left fa-lg"></i></button>

@@ -31,10 +31,8 @@ export class UserAddComponent implements OnInit {
   addUser(): void {
     if (this.userAddForm.valid) {
       this.authService.register(this.userAddForm.value).subscribe(response => {
-        this.toastrService.info("Başarıyla kullanıcı oluşturuldu, giriş sayfasına yönlendiriliyorsunuz...");
-        this.router.navigate(["/admin/users/list"]).then(() => {
-          window.location.reload();
-        });
+        this.toastrService.info("Başarıyla kullanıcı oluşturuldu");
+        this.router.navigate(["/admin/users/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

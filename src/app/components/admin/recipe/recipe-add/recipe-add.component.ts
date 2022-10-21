@@ -37,9 +37,7 @@ export class RecipeAddComponent implements OnInit {
       formData.append("description", this.recipeAddForm.get('description')?.value);
       this.recipeService.add(formData).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/recipes/list"]).then(() => {
-          window.location.reload();
-        });
+        this.router.navigate(["/admin/recipes/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

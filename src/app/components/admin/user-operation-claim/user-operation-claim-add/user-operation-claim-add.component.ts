@@ -39,9 +39,7 @@ export class UserOperationClaimAddComponent implements OnInit {
     if (this.userOperationClaimAddForm.valid) {
       this.userOperationClaimService.add(this.userOperationClaimAddForm.value).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/useroperationclaims/list"]).then(() => {
-          window.location.reload();
-        });
+        this.router.navigate(["/admin/useroperationclaims/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

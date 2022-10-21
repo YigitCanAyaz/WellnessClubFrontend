@@ -30,7 +30,7 @@ export class OperationClaimRemoveComponent implements OnInit {
   removeOperationClaim(operationClaim: OperationClaim): void {
     this.operationClaimService.delete(operationClaim).subscribe(response => {
       this.toastrService.warning(response.message);
-      this.router.navigate(['/admin/operationClaims/list']).then(() => {
+      this.router.navigate(['/admin/operationclaims/list']).then(() => {
         window.location.reload();
       });
     });

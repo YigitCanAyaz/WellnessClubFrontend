@@ -39,9 +39,7 @@ export class EventAddComponent implements OnInit {
       formData.append("date", this.eventAddForm.get('date')?.value);
       this.eventService.add(formData).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/events/list"]).then(() => {
-          window.location.reload();
-        });
+        this.router.navigate(["/admin/events/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

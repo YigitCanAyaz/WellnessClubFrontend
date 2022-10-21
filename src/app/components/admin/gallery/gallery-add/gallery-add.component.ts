@@ -22,8 +22,8 @@ export class GalleryAddComponent implements OnInit {
 
   createGalleryAddForm(): void {
     this.galleryAddForm = this.formBuilder.group({
-      title: ["", [Validators.required]],
       imageName: ["", [Validators.required]],
+      file: ["", [Validators.required]],
     });
   }
 
@@ -35,9 +35,7 @@ export class GalleryAddComponent implements OnInit {
       formData.append("imageName", this.galleryAddForm.get('imageName')?.value);
       this.galleryService.add(formData).subscribe(response => {
         this.toastrService.info(response.message);
-        this.router.navigate(["/admin/galleries/list"]).then(() => {
-          window.location.reload();
-        });
+        this.router.navigate(["/admin/galleries/list"]);
       }, responseError => {
         this.toastrService.error(responseError.error);
       });

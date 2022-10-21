@@ -80,7 +80,7 @@ export class AdminDashboardComponent implements OnInit {
 
   getAllUserLength(): void {
     this.userService.getAllUserLength().subscribe(response => {
-      this.userWeightLength = response.data;
+      this.userLength = response.data;
     })
   }
 

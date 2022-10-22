@@ -15,7 +15,7 @@ Open terminal and write these commands :
 # Cloning repository
 $ git clone https://github.com/YigitCanAyaz/WellnessClubFrontend
 # Go to cloned repository
-$ cd WellnessClubBackend
+$ cd WellnessClubFrontend
 
 # Install dependencies
 $ npm install

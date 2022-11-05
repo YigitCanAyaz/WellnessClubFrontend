@@ -3,6 +3,8 @@
 
 This project is the frontend application of the Bilgi University Wellness Club. The main application will be on IOS. This project has been developed based on an admin panel for better usage.
 
+Theme: Dore jQuery - Bootstrap 4 Admin Template
+
 [Click here to view Backend of the project](https://github.com/YigitCanAyaz/WellnessClubBackend "Backend")
 
 [Click here to view Database of the project](https://github.com/YigitCanAyaz/WellnessClubDatabase "Database")
